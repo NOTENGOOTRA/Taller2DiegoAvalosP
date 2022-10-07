@@ -1,6 +1,8 @@
 package gui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RegistroCarrera extends JFrame {
     private JTextField TextonombreCarrera;
@@ -10,6 +12,9 @@ public class RegistroCarrera extends JFrame {
     private JLabel codigoCarrera;
     private JLabel cantidadSemestresCarrera;
     private JPanel RegistroCarrera;
+    private JButton volverButton;
+    private JButton siguienteButton;
+    private JButton guardarButton;
 
 
     public RegistroCarrera(String title) {
@@ -24,6 +29,29 @@ public class RegistroCarrera extends JFrame {
         this.pack();
 
 
+        guardarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        siguienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BusquedaEstudiante frame4 = new BusquedaEstudiante("Búsqueda Estudiante");
+                frame4.setVisible(true);
+                dispose();
+            }
+        });
+        volverButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RegistroEstudiante frame2 = new RegistroEstudiante("Registro Estudiane");
+                frame2.setVisible(true);
+                dispose();
+
+            }
+        });
     }
 
     public static void main(String[] args) {

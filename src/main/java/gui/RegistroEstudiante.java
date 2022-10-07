@@ -19,6 +19,7 @@ public class RegistroEstudiante extends JFrame {
     private JLabel numero;
     private JLabel carrera;
     private JButton siguenteButton;
+    private JButton volverButton;
 
 
     public RegistroEstudiante(String title) {
@@ -52,6 +53,14 @@ public class RegistroEstudiante extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 RegistroCarrera frame3 = new RegistroCarrera("Registro Carrera");
                 frame3.setVisible(true);
+                dispose();
+            }
+        });
+        volverButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ventanaBienvenida frame = new ventanaBienvenida("Bienvenida");
+                frame.setVisible(true);
                 dispose();
             }
         });
