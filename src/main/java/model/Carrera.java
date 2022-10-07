@@ -79,5 +79,10 @@ public class Carrera {
         }
     }
 
+    public void eliminaEstudiante(String nombre, String apellido, String rut, int numero) {
+        Estudiante estudiante = new Estudiante(nombre, apellido, rut, numero);
+        this.estudiantes.remove(estudiante);
+    }
+
 
 }
