@@ -32,7 +32,16 @@ public class RegistroCarrera extends JFrame {
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                String nombre, codigo, cantSemestres;
+                nombre = TextonombreCarrera.getText().toString();
+                codigo = TextocodigoCarrera.getText().toString();
+                cantSemestres = TextocantidadSemestres.getText().toString();
 
+                if (nombre.equals("") && codigo.equals("") && cantSemestres.equals("")  )
+                    JOptionPane.showMessageDialog(null, "Insertar datos en todos los campos porfavor");
+                else{
+                    JOptionPane.showMessageDialog(null, "Datos agregados");
+                }
             }
         });
         siguienteButton.addActionListener(new ActionListener() {

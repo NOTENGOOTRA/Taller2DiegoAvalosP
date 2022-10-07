@@ -44,7 +44,7 @@ public class RegistroEstudiante extends JFrame {
                 estudianteAdd.setCarrera(ListaCarrera.getActionCommand());
 
                     JOptionPane.showMessageDialog(null, "Datos agregados");
-
+                  //No me funciono
                 dispose();
             }
         });
