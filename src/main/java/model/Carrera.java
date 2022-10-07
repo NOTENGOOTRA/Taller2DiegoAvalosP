@@ -69,9 +69,9 @@ public class Carrera {
 
 
 
-    public boolean añadirEstudiante(String nombre, String apellido, String rut, int numero) {
+    public boolean añadirEstudiante(String nombre, String apellido, String rut, int numero, String carrera) {
         if (ValidadorRut.validarDigito(rut) && this.buscarEstudiante(rut) == null) {
-            Estudiante estudiante = new Estudiante(nombre, apellido, rut, numero);
+            Estudiante estudiante = new Estudiante(nombre, apellido, rut, numero, carrera);
             this.estudiantes.add(estudiante);
             return true;
         } else {
@@ -79,8 +79,8 @@ public class Carrera {
         }
     }
 
-    public void eliminaEstudiante(String nombre, String apellido, String rut, int numero) {
-        Estudiante estudiante = new Estudiante(nombre, apellido, rut, numero);
+    public void eliminaEstudiante(String nombre, String apellido, String rut, int numero, String carrera) {
+        Estudiante estudiante = new Estudiante(nombre, apellido, rut, numero, carrera);
         this.estudiantes.remove(estudiante);
     }
 

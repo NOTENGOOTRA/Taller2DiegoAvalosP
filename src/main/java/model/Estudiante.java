@@ -7,11 +7,14 @@ public class Estudiante {
     private String rut;
     private int numeroMatricula;
 
-    public Estudiante(String nombre, String apellido, String rut, int numeroMatricula) {
+    private String carrera;
+
+    public Estudiante(String nombre, String apellido, String rut, int numeroMatricula, String carrera) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.rut = rut;
         this.numeroMatricula = numeroMatricula;
+        this.carrera = carrera;
     }
 
     public Estudiante(){
@@ -48,5 +51,13 @@ public class Estudiante {
 
     public void setNumeroMatricula(int numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
     }
 }

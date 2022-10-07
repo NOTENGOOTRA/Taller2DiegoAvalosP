@@ -1,5 +1,7 @@
 package gui;
 
+import model.Estudiante;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,20 +31,15 @@ public class RegistroEstudiante extends JFrame {
         this.setContentPane(RegistroEstudiante);
         this.pack();
 
+
         guardarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nombre, rut, numero, carrera;
-                nombre = textoNombre.getText().toString();
-                rut = textoRut.getText().toString();
-                numero = textoNumero.getText().toString();
-                carrera = ListaCarrera.getActionCommand().toString();
-
-                if (nombre.equals("") && rut.equals("") && numero.equals("") && carrera.equals("") )
-                    JOptionPane.showMessageDialog(null, "Insertar datos en todos los campos porfavor");
-                else{
-                    JOptionPane.showMessageDialog(null, "Datos agregados");
-                }
+                Estudiante estudianteAdd = new Estudiante();
+                estudianteAdd.setNombre( textoNombre.getText() );
+                estudianteAdd.setRut( textoRut.getText() );
+                estudianteAdd.setNumeroMatricula(Integer.parseInt(textoNumero.getText()));
+                estudianteAdd.setCarrera(ListaCarrera.getActionCommand());
 
                 dispose();
             }
