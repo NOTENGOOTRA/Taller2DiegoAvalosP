@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 public class Estudiante {
 
     private String nombre;
@@ -8,6 +10,8 @@ public class Estudiante {
     private int numeroMatricula;
 
     private String carrera;
+
+    private List<Estudiante> estudianteAdd;
 
     public Estudiante(String nombre, String apellido, String rut, int numeroMatricula, String carrera) {
         this.nombre = nombre;

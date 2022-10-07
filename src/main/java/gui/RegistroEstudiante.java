@@ -18,6 +18,7 @@ public class RegistroEstudiante extends JFrame {
     private JLabel rut;
     private JLabel numero;
     private JLabel carrera;
+    private JButton siguenteButton;
 
 
     public RegistroEstudiante(String title) {
@@ -41,6 +42,16 @@ public class RegistroEstudiante extends JFrame {
                 estudianteAdd.setNumeroMatricula(Integer.parseInt(textoNumero.getText()));
                 estudianteAdd.setCarrera(ListaCarrera.getActionCommand());
 
+                    JOptionPane.showMessageDialog(null, "Datos agregados");
+
+                dispose();
+            }
+        });
+        siguenteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RegistroCarrera frame3 = new RegistroCarrera("Registro Carrera");
+                frame3.setVisible(true);
                 dispose();
             }
         });
